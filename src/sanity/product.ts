@@ -23,6 +23,14 @@ export const product = {
             name: 'description',
             type: 'string',
             title: 'Description'
+        },
+        {
+            name: 'slug',
+            type: 'slug',
+            title: 'slug',
+            options:{
+                source:'productName',
+            }   
         }
     
     ]
