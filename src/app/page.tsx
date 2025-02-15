@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import { client } from "@/sanity/lib/client";
 import Card from "./components/Card";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 
 
@@ -11,7 +12,7 @@ interface Item {
   productName: string;
   price: number;
   description: string;
-  image:any;
+  image:SanityImageSource;
 }
 
 export default async function Home() {

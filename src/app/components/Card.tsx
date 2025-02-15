@@ -1,4 +1,5 @@
 import { urlFor } from '@/sanity/lib/image'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import Image from 'next/image'
 import React from 'react'
 
@@ -8,7 +9,7 @@ interface ItemType {
   productName: string;
   price: number;
   description: string;
-  image: any; // If the image type is more specific, replace `any` with the correct type.
+  image: SanityImageSource; // If the image type is more specific, replace `any` with the correct type.
 }
 
 const Card = ({item} :{item:ItemType})=> {
