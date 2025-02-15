@@ -4,16 +4,21 @@ import Footer from "./components/Footer";
 import { client } from "@/sanity/lib/client";
 import Card from "./components/Card";
 
+
+
 interface Item {
   _id: string;
   productName: string;
   price: number;
   description: string;
+  image:any;
 }
 
 export default async function Home() {
+  //Fetch Product data from sanity
   const data: Item[] = await client.fetch(`*[_type == 'product']`);
-
+    console.log(data)
+    
   return (
     <>
       <Header />
